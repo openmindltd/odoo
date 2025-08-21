@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_inherit_solibre_sales_agent" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[hasclass('page')]/div[@id='informations']/div[last()]" position="after">
+            <div t-if="doc.sales_agent_id" class="col-auto" name="sales_agent">
+                <strong>Sales Agent</strong>
+                <p t-field="doc.sales_agent_id" class="m-0"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
